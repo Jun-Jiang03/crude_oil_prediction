@@ -43,7 +43,7 @@ python -m pip install prophet
 3. Geopolitic Risk Impact on Crude oil Price
 
 
-###  WCS and WTI vs GDP 
+###  1.WCS and WTI vs GDP 
 
 #### Source of Data 
 
@@ -125,7 +125,7 @@ Applied standardization to improve training
 
 Implemented early stopping to prevent overfitting
 
-### WCS and WTI vs Interest rates and Inflation
+### 2.WCS and WTI vs Interest rates and Inflation
 
 #### Database Setup & Data Import
 Run the script to create the SQLite database and import CSV data:
