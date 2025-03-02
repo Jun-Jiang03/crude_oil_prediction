@@ -133,7 +133,7 @@ Run the script to create the SQLite database and import CSV data:
 2)python app.py
 3) Notebooks
     Data cleaning_oilprice_and_interest_rates.ipynb  # Jupyter notebook for data cleaning 
-    Explore and training model.ipynb  # Jupyter notebook for model training
+    Explore and training model_interest_rates.ipynb  # Jupyter notebook for model training
 
 #### Data Sources
 
@@ -147,7 +147,7 @@ All data is cleaned and stored in an SQLite database for easy querying and acces
 
 #### How to Train the Model
 
-Open the Jupyter Notebook (Explore and training model.ipynb).
+Open the Jupyter Notebook (Explore and training model_interest_rates.ipynb).
 Run the data preprocessing steps.
 Train multiple linear regression models and compare R² scores.
 Save the best-performing model.
