@@ -37,53 +37,15 @@ python -m pip install prophet
     import matplotlib.pyplot 
 
 
-4. Database Setup & Data Import
-Run the script to create the SQLite database and import CSV data:
-1)python create_sqlite.py
-2)python app.py
-
 ## Project Structure
-
-project_4_oil_price_prediction
-1) Resources # Raw data files (CSV)
-2) Scripts                      
-    create_sqlite.py # Creates SQLite database & imports data
-    app.py # Flask API for serving Interest rates and crude oil price
-3) Notebooks
-    Data cleaning_oilprice_and_interest_rates.ipynb  # Jupyter notebook for data cleaning 
-    Explore and training model.ipynb  # Jupyter notebook for model training
-
-4) README.md #Project documentation
-
-## Data Sources
-
-Crude Oil Prices: WTI and WCS monthly historical prices.
-
-Macroeconomic Indicators:
-  Canadian Interest Rates (Inflation, 10-Year Bond Yield, Overnight Rate)
-  US Federal Interest Rates (Inflation, 10-Year Bond Yield, Federal Rate)
-
-All data is cleaned and stored in an SQLite database for easy querying and access.
-
-## How to Train the Model
-
-Open the Jupyter Notebook (Explore and training model.ipynb).
-Run the data preprocessing steps.
-Train multiple linear regression models and compare R² scores.
-Save the best-performing model.
+1. GDP impact on Crude Oil Price
+2. Other Macroencominc factors on Crude Oil Price
+3. Geopolitic Risk Impact on Crude oil Price
 
 
+###  WCS and WTI vs GDP 
 
-## API Endpoints:
-
-GET /api/v1.0/cad_rates → Returns Canadian macroeconomic data.
-
-GET /api/v1.0/fed_rates → Returns US macroeconomic data.
-Data Sources
-
-###  WSC and WTI vs GDP 
-
-## Source of Data 
+#### Source of Data 
 
 Primary Data Source: SQL Database / Spark DataFrame
 
@@ -104,7 +66,7 @@ type_
 value (WSC price change)
 
 
- ## How to Run the Model
+ #### How to Run the Model
 
 Load Data from SQL/Spark:
 
@@ -137,14 +99,14 @@ nn = tf.keras.models.Sequential([
 nn.compile(loss="mse", optimizer="adam", metrics=["mae"])
 nn.fit(X_train_scaled, y_train, epochs=100, batch_size=16, validation_split=0.2)
 
-## Evaluate Model Performance:
+#### Evaluate Model Performance:
 
 from sklearn.metrics import r2_score
 y_pred = nn.predict(X_test_scaled).ravel()
 r2 = r2_score(y_test, y_pred)
 print(f"R² Score: {r2:.2f}")
 
-## Results & Key Findings
+#### Results & Key Findings
 
 R² Score Achieved: >= 0.80 
 - after trying to Optimize two times in Spark - the WTI vs GDP and WSC vs GDP does not meet this requirement
@@ -155,13 +117,49 @@ Mean Absolute Error (MAE): Optimized below 5%
 
 Data Source: Retrieved using SQL/Spark
 
-## Tools used to Optimize the model:
+### Tools used to Optimize the model:
 
 Used one-hot encoding for categorical variables
 
 Applied standardization to improve training
 
 Implemented early stopping to prevent overfitting
+
+### WCS and WTI vs Interest rates and Inflation
+
+#### Database Setup & Data Import
+Run the script to create the SQLite database and import CSV data:
+1)python create_sqlite.py
+2)python app.py
+3) Notebooks
+    Data cleaning_oilprice_and_interest_rates.ipynb  # Jupyter notebook for data cleaning 
+    Explore and training model.ipynb  # Jupyter notebook for model training
+
+#### Data Sources
+
+Crude Oil Prices: WTI and WCS monthly historical prices.
+
+Macroeconomic Indicators:
+  Canadian Interest Rates (Inflation, 10-Year Bond Yield, Overnight Rate)
+  US Federal Interest Rates (Inflation, 10-Year Bond Yield, Federal Rate)
+
+All data is cleaned and stored in an SQLite database for easy querying and access.
+
+#### How to Train the Model
+
+Open the Jupyter Notebook (Explore and training model.ipynb).
+Run the data preprocessing steps.
+Train multiple linear regression models and compare R² scores.
+Save the best-performing model.
+
+
+
+#### API Endpoints:
+
+GET /api/v1.0/cad_rates → Returns Canadian macroeconomic data.
+
+GET /api/v1.0/fed_rates → Returns US macroeconomic data.
+Data Sources
 
 
 
