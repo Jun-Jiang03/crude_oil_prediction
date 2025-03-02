@@ -148,7 +148,8 @@ print(f"R² Score: {r2:.2f}")
 
 R² Score Achieved: >= 0.80 
 - after trying to Optimize two times in Spark - the WTI vs GDP and WSC vs GDP does not meet this requirement
--tried running the model three times, first by standardization, second by changing the epohs and then applying xboost
+
+-Tried running the model three times, first by standardization, second by changing the epohs and then applying xboost
 
 Mean Absolute Error (MAE): Optimized below 5%
 
