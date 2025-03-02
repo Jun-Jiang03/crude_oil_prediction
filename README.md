@@ -23,18 +23,18 @@ git clone https://github.com/Jun-Jiang03/crude_oil_prediction.git
 Ensure you have Python 3.8+ installed. Then, install required libraries:
 python -m pip install prophet
 #Dependencies
-import requests
-import json
-import pandas 
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-import numpy 
-from pathlib import Path
-from sklearn.linear_model import LinearRegression
-import sklearn as 
-import matplotlib.pyplot 
+    import requests
+    import json
+    import pandas 
+    import sqlalchemy
+    from sqlalchemy.ext.automap import automap_base
+    from sqlalchemy.orm import Session
+    from sqlalchemy import create_engine, func
+    import numpy 
+    from pathlib import Path
+    from sklearn.linear_model import LinearRegression
+    import sklearn as 
+    import matplotlib.pyplot 
 
 
 4. Database Setup & Data Import
