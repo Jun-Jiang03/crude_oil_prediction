@@ -34,7 +34,7 @@ python app.py
 project_4_oil_price_prediction/
 │-- Resources/               # Raw data files (CSV)
 │-- scripts/                       
-│   ├-- create_sqlite.py    # Creates SQLite database & imports data
+|-- create_sqlite.py    # Creates SQLite database & imports data
 │   
 │-- notebooks/
     └-- Data cleaning_oilprice_and_interest_rates.ipynb  # Jupyter notebook for data cleaning 
