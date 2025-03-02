@@ -1,0 +1,2 @@
+Experiment,Hidden Layer 1,Hidden Layer 2,Batch Size,Epochs,Validation Loss,Test MAE,R² Score
+1,80,50,16,100,362.96722412109375,13.685123443603516,0.03861444210250231
