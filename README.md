@@ -14,6 +14,8 @@ Data Processing & Feature Engineering: Preparing datasets for machine learning.
 
 Model Training & Evaluation: Developing linear models, optimizing parameters, and selecting the best model based on R² scores.
 
+Presentation slides: https://docs.google.com/presentation/d/1zzRbnrmtFs0Z2QyyyBRQrC0R9u05juFSvDWxHbvpG1c/edit?usp=sharing
+
 ## Installation & Setup
 
 1. Clone the Repository
