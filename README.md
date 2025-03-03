@@ -37,23 +37,16 @@ python -m pip install prophet
     import matplotlib.pyplot 
 
 
-4. Database Setup & Data Import
+3. Database Setup & Data Import
 Run the script to create the SQLite database and import CSV data:
 1)python create_sqlite.py
 2)python app.py
 
 ## Project Structure
 
-project_4_oil_price_prediction
-1) Resources # Raw data files (CSV)
-2) Scripts                      
-    create_sqlite.py # Creates SQLite database & imports data
-    app.py # Flask API for serving Interest rates and crude oil price
-3) Notebooks
-    Data cleaning_oilprice_and_interest_rates.ipynb  # Jupyter notebook for data cleaning 
-    Explore and training model.ipynb  # Jupyter notebook for model training
-
-4) README.md #Project documentation
+1.GDP impact on crude oil price
+2.other Macroeconomic factors including interest rates and inflation impact on crude oil price
+3.Geopolitic risk on crude oil price
 
 ## Data Sources
 
@@ -67,7 +60,7 @@ All data is cleaned and stored in an SQLite database for easy querying and acces
 
 ## How to Train the Model
 
-Open the Jupyter Notebook (Explore and training model.ipynb).
+Open the Jupyter Notebook (Explore and training model_interest_rates.ipynb).
 Run the data preprocessing steps.
 Train multiple linear regression models and compare R² scores.
 Save the best-performing model.
